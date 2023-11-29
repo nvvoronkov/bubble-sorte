@@ -1,6 +1,6 @@
 package com.gosniias.controller;
 
-import com.gosniias.ArrayDto;
+import com.gosniias.dto.ArrayDto;
 import com.gosniias.exception.ArrayIsEmptyException;
 import com.gosniias.model.Sort;
 import com.gosniias.service.ArrayService;

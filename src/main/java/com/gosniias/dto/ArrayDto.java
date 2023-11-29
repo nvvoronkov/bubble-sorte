@@ -1,4 +1,4 @@
-package com.gosniias;
+package com.gosniias.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

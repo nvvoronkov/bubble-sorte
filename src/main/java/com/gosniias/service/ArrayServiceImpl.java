@@ -1,6 +1,6 @@
 package com.gosniias.service;
 
-import com.gosniias.ArrayDto;
+import com.gosniias.dto.ArrayDto;
 import com.gosniias.exception.ArrayNotFoundException;
 import com.gosniias.exception.SQLConstraintViolationException;
 import com.gosniias.model.Array;

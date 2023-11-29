@@ -1,6 +1,6 @@
 package com.gosniias.service;
 
-import com.gosniias.ArrayDto;
+import com.gosniias.dto.ArrayDto;
 import com.gosniias.model.Array;
 import com.gosniias.model.Sort;
 
