@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  bubble-sort:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: bubble-sort
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+
+  postgres:
+    build:
+      context: .
+    image: postgres:14.5
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: Bubble
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - postgres
+
+  pgadmin-icd:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
