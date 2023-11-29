@@ -1,6 +1,5 @@
 package com.gosniias.service;
 
-import com.gosniias.dto.ArrayDto;
 import com.gosniias.exception.ArrayNotFoundException;
 import com.gosniias.exception.SQLConstraintViolationException;
 import com.gosniias.model.Array;
@@ -21,16 +20,6 @@ public class ArrayServiceImpl implements ArrayService {
 
     private final ArrayRepository arrayRepository;
     private final ArrayValueRepository arrayValueRepository;
-
-    @Override
-    public void add(ArrayDto arrayDto, String arrayName, Sort sort) {
-
-    }
-
-    @Override
-    public ArrayDto get(String arrayName) {
-        return null;
-    }
 
     @Override
     public void add(String arrayString, String arrayName, Sort sort) {
