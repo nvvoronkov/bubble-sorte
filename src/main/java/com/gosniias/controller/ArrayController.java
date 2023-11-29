@@ -1,6 +1,8 @@
 package com.gosniias.controller;
 
 import com.gosniias.ArrayDto;
+import com.gosniias.exception.ArrayIsEmptyException;
+import com.gosniias.model.Sort;
 import com.gosniias.service.ArrayService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +23,9 @@ public class ArrayController {
 
     @PostMapping("/array")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public void add(@Valid @RequestBody ArrayDto arrayDto, @RequestParam @NotNull String arrayName, @RequestParam @NotNull Sort sort) {
+    public void add(@Valid @RequestBody ArrayDto arrayDto,
+                    @RequestParam @NotNull String arrayName,
+                    @RequestParam @NotNull Sort sort) throws ArrayIsEmptyException {
         log.info("Calling POST: /array with 'arrayDto': {}, 'arrayName: {}", arrayDto.toString(), arrayName);
         if (arrayDto.getArray().length == 0) {
             throw new ArrayIsEmptyException("Array must not be empty.");
@@ -34,5 +38,4 @@ public class ArrayController {
         log.info("Calling GET: /array with 'arrayName': {}", arrayName);
         return arrayService.get(arrayName);
     }
-
 }
