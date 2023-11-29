@@ -19,7 +19,7 @@ import java.util.List;
 @Slf4j
 @Controller
 @RequiredArgsConstructor
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, name = "/array")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class ArrayController {
 
     private final ArrayService arrayService;
@@ -33,7 +33,7 @@ public class ArrayController {
         return "index";
     }
 
-    @PostMapping
+    @PostMapping(path = "/array")
     @ResponseStatus(code = HttpStatus.CREATED)
     public String sendArray(@Valid @ModelAttribute("arrayDto") ArrayDtoInput arrayDto, Model model) {
         log.info("Calling POST: /array with 'arrayDto': {}", arrayDto.toString());
@@ -49,7 +49,7 @@ public class ArrayController {
         return "index";
     }
 
-    @GetMapping
+    @GetMapping(path = "/array")
     public String getArray(@RequestParam Integer arrayId, Model model) {
         log.info("Calling GET: /array with 'arrayId': {}", arrayId);
 
