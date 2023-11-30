@@ -10,8 +10,3 @@ Project specifications:
 3. Each element of the sorted array must be stored in a separate row of the table. The results of the sorting must also be stored in the database.
 4. Implement the ability to obtain a sorted array by executing an HTTP request.
 5. Upload the created project to GitHub. The project must contain all source files, including the database script .
-
-## Demo
-<p align="center">
-  <img src="https://github.com/cptntotoro/fullstack-bubble-sort/blob/master/demonstration.gif?raw=true" />
-</p>
