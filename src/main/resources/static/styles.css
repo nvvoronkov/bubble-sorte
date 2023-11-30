@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #1b1b32;
+    background-color: rgb(38, 37, 41);
     color: #f5f6f7;
     font-family: Tahoma, serif;
     font-size: 16px;
@@ -24,7 +24,7 @@ form {
 fieldset {
     border: none;
     padding: 2rem 0;
-    border-bottom: 3px solid #3b3b4f;
+    border-bottom: 3px solid #4646aa;
 }
 
 fieldset:last-of-type {
@@ -69,7 +69,7 @@ input[type="submit"] {
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
-    background-color: #3b3b4f;
-    border-color: white;
+    background-color: #363671;
+    border-color: rgb(255, 255, 255);
     min-width: 300px;
 }
