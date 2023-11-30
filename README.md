@@ -15,8 +15,3 @@ Java, Spring Boot, Spring JPA, PostgreSQL, REST API, Lombok, Thymeleaf, HTML, CS
    http-запроса. В запрос должен передаваться идентификатор сортировки.
 6. Созданный проект залить на GitHub. В составе проекта должны быть все исходные
    файлы, в том числе скрипт, с помощью которого создана БД (п. 3).
-
-## Демонстрация
-<p align="center">
-  <img src="https://github.com/nvvoronkov/bubble-sorte/blob/master/demonstration.gif?raw=true" />
-</p>
